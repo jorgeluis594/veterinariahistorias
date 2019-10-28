@@ -1,0 +1,38 @@
+<div id="content-wrapper" class="d-flex flex-colum">
+    <div id="content">
+        <div class="container-fluid mt-4 mb-4">
+         <div class="d-sm-flex align-items-center justify-content-between mb-4">
+             <h1 class="h3 mb-0 text-gray-800">Listado de clientes</h1>
+             <a href="/clientes/agregar" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Nuevo cliente</a>
+         </div> 
+         <div class="card shadow mb-4">
+             <div class="card-body">
+                 <div class="table-responsive">
+                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                         <thead>
+                             <tr>
+                                 <th>Dni</th>
+                                 <th>Teléfono</th>
+                                 <th>Nombre</th>
+                                 <th>Correo</th>
+                                 <th>Mascotas</th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             {{#each clientes}}
+                             <tr>
+                             <td><a href="/clientes/ficha/{{_id}}">{{dni}}</a></td>
+                             <td><a href="/clientes/ficha/{{_id}}">{{celular}}</a></td>
+                             <td><a href="/clientes/ficha/{{_id}}">{{nombrecli}} </a></td>
+                             <td><a href="/clientes/ficha/{{_id}}">{{email}} </a></td>
+                             <td><a href="/clientes/ficha/{{_id}}"><i class="fa fa-paw"></i>&nbsp MASCOTAS</a></td>
+                             </tr>
+                             {{/each}}
+                         </tbody>
+                     </table>
+                 </div>
+             </div>
+         </div>
+        </div>
+    </div>
+</div>

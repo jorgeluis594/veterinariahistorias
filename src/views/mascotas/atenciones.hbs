@@ -1,0 +1,62 @@
+<div id="content-wrapper" class="d-flex flex-colum">
+    <div id="content">
+        <div class="container-fluid my-4">
+            <div class="d-sm-flex align-itmes-center justify-content-between pt-4">
+                <h1 class="h3 mb-0 text-gray-800">Ficha cliente</h1>
+            </div>
+            <div class="row mt-5">
+                <div class="col-sm-3">
+                  <div class="card">
+                    <div class="card-body py-4 text-center">
+                       <i class="fa fa-paw" style="font-size:40px"></i> 
+                       <div class="nombre mt-2">{{nombremasco}}</div>
+                       <div class="info">{{dateformat nacimiento}}</div>
+                       <div class="info">{{raza}}</div>
+                       <div class="info">{{peso}}kg - {{sexo}}</div>
+                       <br>
+                       <a href="#" class="btn btn-success btn-icon-split btn-block d-flex justify-content-start">
+                           <span class="icon text-white-50">
+                               <i class="fas fa-pen"></i>
+                           </span>
+                           <span class="text">Editar datos</span>
+                       </a> 
+                    </div>                      
+                   </div>
+                <div class="card">
+                    <div class="card-body py-2 text-center">
+                       <i class="fa fa-user" style="font-size:40px"></i> 
+                       <div class="nombre mt-1">{{nombrecli}}</div>
+                       <div class="info">{{dni}}</div>
+                       <div class="info">{{telefono}}</div>
+                       <br>
+                    </div>                      
+                   </div>
+                </div>
+                <div class="col-sm-9">
+                <div class="card">
+                    <div class="d-flex justify-content-between p-3">
+                        <p class="m-0 mayusculas">atenciones de {{nombremasco}}</p>
+                        <a href="/mascotas/nueva_atencion/{{idmasco}}" class="d-flex d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i class="fas fa-plus"></i>&nbspNueva atencion</a>
+                    </div>
+                    <div class="col-sm-12 mx-auto ">
+                        {{#each atenciones}}
+                        <div class="card my-2">
+                        <div class="card-body my-1 py-3">
+                            <div class="d-flex justify-content-between card-title mb-1">
+                            <h5 class="text-primary">{{servicio}}</h5>
+                            <p>{{dateformat fecha_atencion}}</p>
+                        </div>
+                            <p class="mb-1" style="max-width: fit-content;">{{detalle}}</label>
+                        </div>
+                        </div>
+                        {{/each}}
+                    </div>
+                </div>
+                <div class="card">
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

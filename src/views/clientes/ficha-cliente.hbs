@@ -1,0 +1,80 @@
+<div id="content-wrapper" class="d-flex flex-colum">
+    <div id="content">
+    <div class="container-fluid mt-4 mb-4">
+        <div class="d-sm-flex align-itmes-center justify-content-between mt4">
+                <h1 class="h3 mb-2 text-gray-800">Ficha cliente</h1>
+        </div>
+        <div class="container-fluid mt-4 mb-4">
+        <div class="row">
+           <div class="col-sm-3">
+               <div class="card">
+                   <div class="card-body py-4 text-center">
+                       <i class="fa fa-user mx-auto" style="font-size:40px;"></i>  
+                        {{#with cliente}}
+                       <div class="nombre mt-2">{{nombrecli}} </div>
+                       <div class="info">{{dni}} </div>
+                       <div class="info">{{telefono}}</div>
+                       <br>
+                       <a href="/clientes/editar/{{_id}}" class="btn btn-success btn-icon-split btn-block d-flex justify-content-start">
+                           <span class="icon text-white-50">
+                               <i class="fas fa-pen"></i>
+                           </span>
+                           <span class="text">Editar cliente</span>
+                       </a>
+                       <a href="#" class="btn btn-info btn-icon-split btn-block d-flex justify-content-start">
+                           <span class="icon text-white-50">
+                               <i class="fas fa-print"></i>
+                           </span>
+                           <span class="text">Ficha</span>
+                       </a>
+                       <a href="#" class="btn btn-danger btn-icon-split btn-block d-flex justify-content-start">
+                           <span class="icon text-white-50">
+                               <i class="fas fa-trash-alt"></i>
+                           </span>
+                           <span class="text">Eliminar cliente</span>
+                       </a>
+                       {{/with}}
+                   </div>
+               </div>
+           </div> 
+           <div class="col-sm-9">
+             <div class="card">
+                 <div class="card-header d-flex justify-content-between align-items-center">
+                     {{#with cliente}}
+                     <p class="m-0 mayusculas">Macotas de {{nombrecli}} </p>
+                     <a href="/mascotas/registrar/{{_id}}" class="d-flex d-sm-inline-block btn btn-sm btn-primary shadow-sm">Nueva Mascota</a>
+                     {{/with}}
+                 </div>
+                 <div class="card-body">
+                     <table class="table">
+                         <thead>
+                             <tr>
+                             <th>Nombre</th>
+                             <th>Raza</th>
+                             <th>Peso</th>
+                             <th>Sexo</th>
+                             <th>Nacimiento</th>
+                             <th></th>
+                             </tr>
+                         </thead>
+                         <tbody>
+                             {{#each mascotas}}
+                            <tr>
+                                <td>{{nombremasco}}</td>
+                                <td>{{raza}}</td>
+                                <td>{{peso}}Kg</td>
+                                <td>{{sexo}}</td>
+                                <td>{{dateformat nacimiento}}</td>
+                                <td><a href="/mascotas/atenciones/{{_id}}">Atenciones</a></td>
+                            </tr>
+                            {{/each}}
+                         </tbody>
+                     </table>
+                 </div>
+             </div>  
+           </div>
+        </div>                   
+        </div>
+    </div>
+    </div>
+</div>

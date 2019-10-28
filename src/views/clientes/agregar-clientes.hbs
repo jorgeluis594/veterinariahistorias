@@ -1,0 +1,63 @@
+<div id="content-wrapper" class="d-flex flex-colum">
+    <div id="content">
+        <div class="container-fluid mt-4">
+         <div class="d-sm-flex align-items-center justify-content-between mb-4">
+             <h1 class="h3 mb-0 text-gray-800">Nuevo cliente</h1>
+         </div> 
+         <div class="card shadow mb-4">
+             <div class="card-header">Datos del cliente</div>
+             <div class="card-body">
+                 <form action="/clientes/agregar" method="post">
+                     <div class="form-group row my-4">
+                         <div class="col-sm-2 mx-left">
+                             <label class="control-label">Nombre y apellido</label> 
+                         </div>  
+                      <div class="col-sm-6">
+                          <input type="text" name="nombrecli" class="form-control" required>
+                      </div>
+                     </div>
+                     <div class="form-group row my-4">
+                         <div class="col-sm-2">
+                             <label class="control-label ">DNI</label>
+                         </div>
+                         <div class="col-sm-3">
+                             <input type="text" name="dni"class="form-control" required>
+                         </div>
+                     </div>
+                     <div class="form-group row my-4">
+                       <label class="col-sm-2 control-label">Teléfono fijo</label>
+                       <div class="col-sm-3">
+                           <input type="text" name="telefono" class="form-control">
+                       </div>
+                       <label class="col-sm-2 control-label">Teléfono movil</label>
+                       <div class="col-sm-3">
+                           <input type="text" name="celular" class="form-control" required>
+                       </div>
+                     </div>
+                     <div class="form-group row my-4">
+                         <label class="col-sm-2 conrol-label">Email</label>
+                         <div class="col-sm-3">
+                             <input type="text" name="email" class="form-control">
+                         </div>
+                     </div>
+                     <div class="form-group row my-4">
+                       <label class="col-sm-2 control-label">Distrito</label>
+                       <div class="col-sm-3">
+                           <input type="text" name="distrito" class="form-control" required>
+                       </div>
+                       <label class="col-sm-2 control-label">Dirección</label>
+                       <div class="col-sm-3">
+                           <input type="text" name="direccion" class="form-control" required>
+                       </div>                         
+                     </div>
+                     <div class="row my-4">
+                       <div class="col-sm-8 col-sm-offset-2 mx-auto">
+                           <button type="submit" class="btn-primary btn entity btn-block">Registrar</button>
+                       </div>  
+                     </div>
+                 </form>
+             </div>
+         </div>
+        </div>
+    </div>
+</div>

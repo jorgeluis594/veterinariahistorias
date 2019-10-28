@@ -1,0 +1,45 @@
+<div id="content-wrapper">
+    <div id="content">
+        <div class="container-fluid mt-4">
+            <div class="d-sm-flex align-items mb-4">
+                <h1 class="h3 mb-0 text-gray-800">Nueva Atencion</h1>
+            </div>
+            <div class="card shadow mb-4">
+                <div class="card-body">
+                    <form action="/mascotas/nueva_atencion/" method="post">
+                        <input type="hidden" name="idmascota" value="{{id}}">
+                        <input type="hidden" name="nombremasco" value="{{nombremasco}}">
+                        <div class="form-group row mt-4 align-items-center">
+                            <label class="col-sm-2 control-label">Servicio</label>
+                            <div class="col-sm-3">
+                                <select name="servicio" class="form-control">
+                                    <option value="Petshop">Petshop</option>
+									<option value="Peluquería">Peluquería</option>
+									<option value="Cirugía">Cirugía</option>
+									<option value="Control">Control</option>
+									<option value="Vacuna">Vacuna</option>
+									<option value="Consulta">Consulta</option>
+                                </select>
+                            </div>
+                            <label class="col-sm-2 control-label">Encargado</label>
+                            <div class="col-sm-3">
+                                <input type="text" name="responsable" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-sm-2 control-label">Detalle</label>
+                            <div class="col-sm-8">
+                                <textarea name="detalle" class="form-control"></textarea>
+                            </div>
+                        </div>
+                        <div class="row my-4">
+                            <div class="col-sm-8 mx-auto">
+                                <button type="submit" class="btn btn-block btn-primary">Registrar Atencion</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

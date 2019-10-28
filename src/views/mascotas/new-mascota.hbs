@@ -1,0 +1,71 @@
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#datepicker" ).datepicker();
+  } );
+  </script>
+<div id="content-wrapper" class="d-flex flex-colum">
+    <div id="content">
+        <div class="container-fluid mt-4">
+         <div class="d-sm-flex align-items-center justify-content-between mb-4">
+             <h1 class="h3 mb-0 text-gray-800">Nueva Mascota</h1>
+         </div> 
+         <div class="card shadow mb-4">
+             <div class="card-header">Datos de la mascota</div>
+             <div class="card-body">
+                 <form action="/mascotas/registrar" method="post">
+                    <input type="text" name="idcliente" value="{{id_cliente}}" style="visibility: hidden;">
+                     <div class="form-group row my-4">
+                         <div class="col-sm-2 mx-left">
+                             <label class="control-label">Nombre </label> 
+                         </div>  
+                      <div class="col-sm-6">
+                          <input type="text" name="nombremasco"  class="form-control" required>
+                      </div>
+                     </div>
+                     <div class="form-group row my-4">
+                         <div class="col-sm-2">
+                             <label class="control-label ">Fecha de nacimiento</label>
+                         </div>
+                         <div class="col-sm-3">
+                             <input type="date" id="datepicker"name="nacimiento"class="form-control" placeholder="dd/mm/yy">
+                         </div>
+                     </div>
+                     <div class="form-group row my-4">
+                         <label class="col-sm-2 conrol-label">Raza</label>
+                         <div class="col-sm-3">
+                             <input type="text" name="raza" class="form-control">
+                         </div>
+                         <label class="col-sm-2 conrol-label">Agresividad</label>
+                         <select name="agresividad" class="form-control col-sm-3 mx-2">
+                            <option value="1">Docil</option>
+                            <option value="2">Moderado</option>
+                            <option value="3">Agresivo</option>
+                         </select>
+                     </div>
+                     <div class="form-group row my-4">
+                       <label class="col-sm-2 control-label">Peso</label>
+                       <div class="col-sm-3">
+                           <input type="text" name="peso" class="form-control" required>
+                       </div>
+                       <label class="col-sm-2 control-label">Sexo</label>
+                       <div class="col-sm-3">
+                           <select name="sexo" class="form-control">
+                           <option value="macho">Macho</option>
+                           <option value="hembra">Hembra</option>
+                           </select>
+                       </div>                         
+                     </div>
+                     <div class="row my-4">
+                       <div class="col-sm-8 col-sm-offset-2 mx-auto">
+                           <button type="submit" class="btn-primary btn entity btn-block">Registrar</button>
+                       </div>  
+                     </div>
+                 </form>
+             </div>
+         </div>
+        </div>
+    </div>
+</div>
+
